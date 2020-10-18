@@ -1,0 +1,370 @@
+body, p, h1, ul, li, blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: "Volkorn", Georgia, Serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+/* GRID GERAL */
+
+.estrutura {
+  display: grid;
+  /* Minmax é para definir o mínimo que quero dela, a última eu quero 300px fixo sempre. */
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas:
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer"
+  ;
+}
+
+@media (max-width: 1200px) {
+  .estrutura {
+    grid-template-areas:
+      "header header header"
+      "sidenav content content"
+      "sidenav anuncios anuncios"
+      "footer footer footer"
+    ;
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-columns: 100%; /* 1fr está bugando */
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "anuncios"
+      "footer"
+    ;
+  }
+}
+
+/* HEADER */
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  padding: 30px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background: rgba(0,0,0,.1);
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.header nav a:hover {
+  background: rgba(0,0,0,.5);
+}
+
+.header li + li {
+  margin-left: 30px;
+}
+
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: auto;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .header nav a {
+    font-size: 1em;
+  }
+  .header li + li {
+    margin-left: 10px;
+  }
+}
+
+/* SIDENAV */
+
+.sidenav {
+  grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
+}
+
+.sidenav-item a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: white;
+  box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+  border-radius: 5px;
+  padding: 20px;
+  transition: .1s ease-out;
+}
+
+.sidenav-item a:hover {
+  background: #B07DFB;
+}
+
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidenav {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .sidenav::after {
+    content: '→';
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0,0,0,.3);
+    animation: seta .5s ease-in 0s infinite alternate;
+  }
+  .sidenav ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .sidenav-item {
+    flex: 1 0 60px;
+  }
+  .sidenav {
+    padding: 0 30px;
+  }
+  .sidenav-item a {
+    margin: 30px 30px 30px 0px;
+  }
+}
+
+/* CONTENT */
+
+.content {
+  grid-area: content;
+  margin: 0 auto;
+}
+
+/* ANUNCIOS */
+
+.anuncios {
+  grid-area: anuncios;
+  background: #fafbfc;
+  display: grid;
+  padding: 30px;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-content: start;
+  justify-content: space-around;
+}
+
+/* FOOTER */
+
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+/* GRID DO CONTENT */
+
+.content {
+  display: grid;
+  max-width: 900px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding: 30px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}
+
+.col-wide {
+  /* A coluna vai do 1 até o último, por isso -1, assim pega todas as colunas */
+  grid-column: 1 / -1;
+}
+
+.imagem-1 {
+  /* span 2 significa que ess imagem vai ocupar 2 linhas e será alinhada ao final dela sempre. */
+  grid-row: span 2;
+  align-self: end;
+}
+
+.imagem-2 {
+  align-self: end;
+}
+
+/* ESTILOS DO CONTENT */
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  letter-spacing: -.005em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.informacoes p + p {
+  margin-top: 30px;
+}
+
+/* TITULO */
+
+.titulo {
+  color: #B07DFB;
+}
+
+.titulo h1 {
+  font-size: 3.75em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.titulo span {
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+/* CARACTERISTICAS */
+
+.caracteristicas {
+  display: flex;
+  align-items: flex-start;
+}
+
+.caracteristicas > div {
+  width: 80px;
+  text-align: center;
+  box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  border-radius: 5px;
+  position: relative;
+}
+
+.caracteristicas > div:first-child {
+  margin-right: 30px;
+}
+
+.numero {
+  color: #B07DFB;
+  font-size: 3em;
+  line-height: 1;
+  margin: 10px auto;
+}
+
+.rotulo {
+  background: white;
+  border-radius: 0 0 5px 5px;
+  color: #B07DFB;
+  padding: 5px 0;
+  position: relative;
+  top: 2px;
+}
+
+.caracteristicas span {
+  display: block;
+}
+
+/* DESTAQUE */
+
+.destaque {
+  font-size: 0.875em;
+  color: #B07DFB;
+  max-width: 16em;
+}
+
+.citacao, .atributos {
+  align-self: start;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.citacao p {
+  font-size: 1.5em;
+  font-style: italic;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  color: white;
+}
+
+.atributos li {
+  color: white;
+  font-family: Courier, monospace;
+  font-size: 1.125em;
+  padding: 15px;
+}
+
+.atributos li + li {
+  border-top: 2px solid #AF7BFB;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Animação */
+
+[data-anime] {
+  opacity: 0;
+  transition: .3s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+  transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
