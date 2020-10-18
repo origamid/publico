@@ -1,0 +1,87 @@
+body {
+	margin: 0px;
+	padding: 40px 0 400px 0;
+	background: #1b1d20;
+}
+
+h1, h2, a {
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
+	color: white;
+	font-weight: normal;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 100px;
+}
+
+p {
+	font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #b0b2b3;
+}
+
+section {
+	max-width: 600px;
+	margin: 80px auto;
+	padding: 0 20px;
+}
+
+h2::before {
+	content: '';
+	display: inline-block;
+	height: 18px;
+	width: 3px;
+	border-radius: 5px;
+	margin-right: 10px;
+	background-image: linear-gradient(#DDFF01, #2e0);
+}
+
+section > div {
+	margin: 0 20px;
+}
+
+section > a {
+	display: block;
+	max-width: 120px;
+	text-align: center;
+	text-decoration: none;
+	padding: 8px 20px 10px 20px;
+	text-transform: uppercase;
+	background-image: linear-gradient(#9B30F9, #84e);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	border-radius: 4px;
+	padding: 1em;
+}
+
+section > a:hover {
+	background: #a494f5;
+	color: white;
+}
+
+nav {
+	width: 100%;
+	background: #010101;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+nav ul {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	padding: 0px;
+}
+
+nav a {
+	padding: 10px 20px;
+	text-decoration: none;
+	color: white;
+	font-size: 1.4em;
+}
+
+nav a:hover {
+	color: #a494f5;
+}
