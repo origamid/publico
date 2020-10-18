@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#B07DFB;}
+	.st2{fill:none;stroke:#8844EE;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;}
+</style>
+<g id="Duotone">
+	<path class="st0" d="M18.5,5.5l-0.5-3h-3l-3.5-2L8,2.5H5l-0.5,3l-3,1L2,10l2.5,1l1-0.5v10l6,3l6-3v-10l1,0.5l2.5-1l0.5-4L18.5,5.5z
+		"/>
+	<polyline class="st0" points="5.5,13.5 3.5,13.5 1.5,16.5 3.5,16.5 5.5,15.5 	"/>
+	<polyline class="st0" points="17.5,13.5 19.5,13.5 21.5,16.5 19.5,16.5 17.5,15.5 	"/>
+	<polygon class="st1" points="17.5,10.5 16.5,10 14,11 11.5,10 9,11 6.5,10 5.5,10.5 5.5,13 6.5,12.5 9,13.5 11.5,12.5 14,13.5 
+		16.5,12.5 17.5,13 	"/>
+	<polyline class="st2" points="17.5,10.5 17.5,20.5 11.5,23.5 5.5,20.5 5.5,10.5 	"/>
+	<polygon class="st2" points="11.5,10 14,11 16.5,10 18.5,11 21,10 21.5,6 18.5,5.5 18,2.5 15,2.5 11.5,0.5 8,2.5 5,2.5 4.5,5.5 
+		1.5,6.5 2,10 4.5,11 6.5,10 9,11 	"/>
+	<line class="st2" x1="8.5" y1="15.5" x2="8.5" y2="14.5"/>
+	<line class="st2" x1="14.5" y1="15.5" x2="14.5" y2="14.5"/>
+	<polyline class="st2" points="5.5,13.5 3.5,13.5 1.5,16.5 3.5,16.5 5.5,15.5 	"/>
+	<polyline class="st2" points="17.5,13.5 19.5,13.5 21.5,16.5 19.5,16.5 17.5,15.5 	"/>
+	<line class="st2" x1="10.5" y1="18.5" x2="10.5" y2="19.5"/>
+	<line class="st2" x1="12.5" y1="18.5" x2="12.5" y2="19.5"/>
+</g>
+<g id="Frames-24px">
+	<rect class="st3" width="24" height="24"/>
+</g>
+</svg>
