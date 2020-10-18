@@ -1,0 +1,91 @@
+body, h1, h2, p, ul, li, a {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: "Nunito", Helvetica, Arial, sans-serif;
+	color: #222222;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*Superinfo*/
+
+.superinfo-bg {
+	background: #122ab2;
+	color: white;
+}
+
+.superinfo {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 10px;
+}
+
+.superinfo p, .superinfo a{
+	margin: 0 10px 10px 10px;
+}
+
+.superinfo a {
+	color: white;
+}
+
+/*Menu*/
+
+.menu-bg {
+	background: #2c70ff;
+}
+
+.menu {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 15px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu a {
+	color: white;
+}
+
+.menu-logo a {
+	font-size: 2.25em;
+	font-weight: bold;
+	margin: 0 10px;
+}
+
+.menu-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu-nav a {
+	font-size: 1.25em;
+	display: block;
+	padding: 10px;
+}
+
+.menu-nav a:hover{
+	color: #122ab2;
+}
