@@ -1,0 +1,46 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+div {
+  max-width: 200px;
+}
+
+.mask {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+}
+
+#mask1 {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#mask2 {
+  clip-path: circle();
+}
+
+#mask3 {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#mask4 {
+  clip-path: url(#svgMask1);
+}
+
+#mask5 {
+  clip-path: url(#svgMask2);
+}
+
+#mask6 {
+  clip-path: url(#svgMask3);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clip-path</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="mask1">
+    <img src="./img/img1.jpg" alt="Lobo">
+  </div>
+  <div id="mask2">
+    <img src="./img/img2.jpg" alt="Lobo">
+  </div>
+  <div id="mask3">
+    <img src="./img/img3.jpg" alt="Lobo">
+  </div>
+  <div id="mask4">
+    <img src="./img/img3.jpg" alt="Lobo">
+  </div>
+  <div id="mask5">
+    <img src="./img/img1.jpg" alt="Lobo">
+  </div>
+  <div id="mask6">
+    <img src="./img/img2.jpg" alt="Lobo">
+  </div>
+
+  <svg class="mask">
+    <clipPath id="svgMask1">
+      <path d="M91.3397 27C95.1887 20.3334 104.811 20.3333 108.66 27L183.138 156C186.987 162.667 182.176 171 174.478 171H25.5218C17.8238 171 13.0126 162.667 16.8616 156L91.3397 27Z" fill="#C4C4C4" />
+    </clipPath>
+  </svg>
+
+  <svg class="mask">
+    <clipPath id="svgMask2">
+      <rect x="-6" y="129.147" width="191.127" height="108.078" rx="50" transform="rotate(-45 -6 129.147)" fill="#C4C4C4" />
+    </clipPath>
+  </svg>
+
+  <svg class="mask">
+    <clipPath id="svgMask3" clipPathUnits="objectBoundingBox">
+      <path d="M0.451,0.029 C0.483,0,0.535,0,0.568,0.029 L0.712,0.158 C0.722,0.167,0.735,0.173,0.749,0.177 L0.948,0.223 C0.992,0.233,1,0.274,1,0.313 L0.952,0.488 C0.949,0.501,0.949,0.514,0.952,0.526 L1,0.702 C1,0.741,0.992,0.781,0.948,0.791 L0.749,0.838 C0.735,0.841,0.722,0.848,0.712,0.857 L0.568,0.986 C0.535,1,0.483,1,0.451,0.986 L0.306,0.857 C0.296,0.848,0.283,0.841,0.269,0.838 L0.071,0.791 C0.026,0.781,0,0.741,0.012,0.702 L0.066,0.526 C0.07,0.514,0.07,0.501,0.066,0.488 L0.012,0.313 C0,0.274,0.026,0.233,0.071,0.223 L0.269,0.177 C0.283,0.173,0.296,0.167,0.306,0.158 L0.451,0.029" fill="#C4C4C4" />
+    </clipPath>
+  </svg>
+
+</body>
+
+</html>
