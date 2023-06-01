@@ -1,0 +1,48 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+:root {
+  --amarelo-1: #ffe500;
+  --amarelo-2: #ff9300;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --amarelo-1: color(display-p3 1 0.9 0);
+    --amarelo-2: color(display-p3 1 0.6 0);
+  }
+}
+
+div {
+  height: 200px;
+}
+
+.p3-1 {
+  background-color: color(display-p3 1 0.9 0);
+}
+
+.p3-2 {
+  background-color: color(display-p3 1 0.6 0);
+}
+
+.p3-3 {
+  background: linear-gradient(
+    to bottom,
+    color(display-p3 1 0.9 0),
+    color(display-p3 1 0.6 0)
+  );
+}
+
+.rgb-1 {
+  background-color: #ffe500;
+}
+
+.rgb-2 {
+  background-color: #ff9300;
+}
+
+.rgb-3 {
+  background: linear-gradient(to bottom, #ffe500, #ff9300);
+}
